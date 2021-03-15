@@ -19,8 +19,13 @@
         let totalSum = count * productPrice;
         let leftInStorage = productQuantity - count;
 
-        alert("Общая стоимость " + totalSum);
-        alert("Количество товара останется на складе после покупки" + leftInStorage);
+        if(leftInStorage < 0)
+            alert("Products left in a storage is less than you need")
+        else
+        {
+            alert("Общая стоимость " + totalSum);
+            alert("Количество товара останется на складе после покупки" + leftInStorage);
+        }
     </script>
 </body>
 </html>
