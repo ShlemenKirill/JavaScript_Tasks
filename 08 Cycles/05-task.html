@@ -28,7 +28,30 @@
         Сценарий: Правильно! Загаданное значение 56. Вы угадали с 4й попытки. 
     </pre>
     <script>
+        let randomValue = Math.floor(Math.random() * 101);
+        alert("я загадал случайное значение от 0 до 100")
+        let userValue;;
+        let counter = 1;
         
+        while(true)
+        {
+            userValue = +prompt("Enter value between 0 and 100");
+            if (userValue < randomValue) {
+                alert(`я загадал значение больше, чем ${userValue}`);
+                counter++;
+                continue;
+            }
+            else if (userValue > randomValue) {
+                alert(`я загадал значение меньше, чем ${userValue}`);
+                counter++;
+                continue;
+            }
+            else if (userValue == randomValue) {
+                alert(`Правильно! Загаданное значение ${userValue}. Вы угадали с ${counter}й попытки.`)
+                break;
+            }
+            
+        }
     </script>
 </body>
 </html>
