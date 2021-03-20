@@ -9,10 +9,34 @@
     <pre>
         Задание:
         Создайте функцию avg(a, b, c), которая возвращает среднее арифметическое для чисел a, b, c
-        Если параметр отсутствует - не используйте значение для расчета среднего арифметического значения.
+        Если параметр отсутствует - не используйте значение для расчета среднего арифметического значения.        
     </pre>
-    <script>
-        
+    <script>        
+        function average(a, b, c) {
+            sum = 0;
+            counter = 0;
+            if(a)
+            {
+                sum +=a;
+                counter++;
+            }
+            if(b)
+            {
+                sum += b;
+                counter++;
+            }
+            if(c)
+            {
+                sum += c;
+                counter++;
+            }
+
+            return sum / counter;
+            
+        }
+        console.log(average(1, 2, 3));
+        console.log(average(1,2));
+        console.log(average(1));
     </script>
 </body>
 </html>
